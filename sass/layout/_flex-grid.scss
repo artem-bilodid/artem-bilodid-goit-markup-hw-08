@@ -1,0 +1,23 @@
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--flex-grid-margin));
+  margin-left: calc(-1 * var(--flex-grid-margin));
+}
+
+.flex-grid__item {
+  margin-top: var(--flex-grid-margin);
+  margin-left: var(--flex-grid-margin);
+
+  .flex-grid--3-col & {
+    @include gridItem($columnsCount: 3);
+  }
+
+  .flex-grid--4-col & {
+    @include gridItem($columnsCount: 4);
+  }
+
+  .flex-grid--6-col & {
+    @include gridItem($columnsCount: 6);
+  }
+}

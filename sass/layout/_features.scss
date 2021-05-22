@@ -1,0 +1,31 @@
+.features-section {
+  padding-top: 94px;
+}
+
+.features {
+  @include gridContainer();
+}
+
+.features-item {
+  @include gridItem(4);
+}
+
+.features-item__title {
+  @extend %title;
+  margin-bottom: 10px;
+  font-size: 14px;
+
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.features-item__icon-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  background-color: var(--background-secondary-color);
+  border-radius: 4px;
+}
