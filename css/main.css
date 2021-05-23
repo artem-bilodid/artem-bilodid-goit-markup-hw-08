@@ -819,20 +819,39 @@ img {
   align-self: center;
 }
 
-.projects__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--flex-grid-margin));
-  margin-left: calc(-1 * var(--flex-grid-margin));
+@media screen and (min-width: 768px) {
+  .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--flex-grid-margin));
+    margin-left: calc(-1 * var(--flex-grid-margin));
+  }
 }
 
-.project__item {
-  margin-top: var(--flex-grid-margin);
-  margin-left: var(--flex-grid-margin);
-  flex-basis: calc( (100% - 3 * var(--flex-grid-margin)) / 3);
+@media screen and (max-width: 767px) {
+  .project__item:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project__item {
+    margin-top: var(--flex-grid-margin);
+    margin-left: var(--flex-grid-margin);
+    flex-basis: calc( (100% - 2 * var(--flex-grid-margin)) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project__item {
+    margin-top: var(--flex-grid-margin);
+    margin-left: var(--flex-grid-margin);
+    flex-basis: calc( (100% - 3 * var(--flex-grid-margin)) / 3);
+  }
 }
 
 .project__label {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid var(--portfolio-border-color);
   border-bottom: 1px solid var(--portfolio-border-color);
@@ -867,7 +886,9 @@ img {
 }
 
 .project__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: var(--animate-shadow);
 }
 
@@ -877,6 +898,7 @@ img {
 }
 
 .project__name {
+  color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -1215,7 +1237,7 @@ img {
   margin-bottom: 40px;
 }
 
-@media screen and (min-width: 768) {
+@media screen and (min-width: 768px) {
   .filters__container {
     margin-bottom: 30px;
   }
@@ -1232,6 +1254,12 @@ img {
   flex-wrap: wrap;
   margin-left: -8px;
   margin-top: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .filters__list {
+    justify-content: center;
+  }
 }
 
 .filters__item {

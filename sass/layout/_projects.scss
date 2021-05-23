@@ -1,12 +1,26 @@
 .projects__list {
-  @include gridContainer();
+  @media screen and (min-width: 768px) {
+    @include gridContainer();
+  }
 }
 
 .project__item {
-  @include gridItem(3);
+  &:not(:first-child) {
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include gridItem(2);
+  }
+  @media screen and (min-width: 1200px) {
+    @include gridItem(3);
+  }
 }
 
 .project__label {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid var(--portfolio-border-color);
   border-bottom: 1px solid var(--portfolio-border-color);
@@ -41,7 +55,9 @@
 }
 
 .project__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: var(--animate-shadow);
 
   &:hover,
@@ -53,6 +69,7 @@
 }
 
 .project__name {
+  color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
