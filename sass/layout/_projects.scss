@@ -13,10 +13,6 @@
   border-left: 1px solid var(--portfolio-border-color);
 }
 
-.project {
-  flex-basis: calc((100% - 3 * var(--flex-grid-margin)) / 3);
-}
-
 .project__thumb {
   position: relative;
   overflow: hidden;

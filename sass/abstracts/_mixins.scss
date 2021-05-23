@@ -1,13 +1,22 @@
-@mixin gridContainer($margin: var(--flex-grid-margin)) {
+@mixin gridContainer(
+  $marginTop: var(--flex-grid-margin),
+  $marginLeft: var(--flex-grid-margin)
+) {
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-1 * #{$margin});
-  margin-left: calc(-1 * #{$margin});
+  margin-top: calc(-1 * #{$marginTop});
+  margin-left: calc(-1 * #{$marginLeft});
 }
 
-@mixin gridItem($columnsCount, $margin: var(--flex-grid-margin)) {
-  margin-top: #{$margin};
-  margin-left: #{$margin};
+@mixin gridItem(
+  $columnsCount,
+  $marginTop: var(--flex-grid-margin),
+  $marginLeft: var(--flex-grid-margin)
+) {
+  margin-top: #{$marginTop};
+  margin-left: #{$marginLeft};
 
-  flex-basis: calc((100% - #{$columnsCount} * #{$margin}) / #{$columnsCount});
+  flex-basis: calc(
+    (100% - #{$columnsCount} * #{$marginLeft}) / #{$columnsCount}
+  );
 }

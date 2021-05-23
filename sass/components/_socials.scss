@@ -1,20 +1,17 @@
-.socials-list {
+.socials__list {
   display: flex;
-}
-
-.socials-list--centered {
   justify-content: center;
 }
 
-.socials-list__item:not(:last-child) {
+.socials__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.socials-list__icon {
+.socials__icon {
   --color4: currentColor;
 }
 
-.socials-list__link {
+.socials__link {
   @extend %link;
 
   display: flex;
@@ -33,7 +30,7 @@
   }
 }
 
-.socials-list__link--dark-bg {
+.socials__link--dark-bg {
   background-color: var(--footer-icon-background-color);
   color: var(--background-dark-primary-text-color);
 

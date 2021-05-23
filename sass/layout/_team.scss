@@ -6,13 +6,26 @@
 }
 
 .team__list {
-  @include gridContainer();
+  @media screen and (min-width: 768px) {
+    @include gridContainer();
+  }
 }
 
 .team__item {
-  @include gridItem(4);
   background-color: var(--background-primary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  &:not(:first-child) {
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include gridItem(2);
+  }
+  @media screen and (min-width: 1200px) {
+    @include gridItem(4);
+  }
 }

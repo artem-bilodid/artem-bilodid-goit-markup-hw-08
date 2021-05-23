@@ -3,7 +3,15 @@
 }
 
 .clients__item {
-  @include gridItem(6);
+  @include gridItem(2);
+
+  @media screen and (min-width: 768px) {
+    @include gridItem(3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include gridItem(6);
+  }
 }
 
 .client__link {

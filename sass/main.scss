@@ -5,12 +5,14 @@
 @import "./base/modern-normalize";
 @import "./base/common";
 
+@import "./layout/container";
 @import "./layout/flex-grid";
 @import "./layout/header";
 @import "./layout/navigation";
 @import "./layout/hero";
 @import "./layout/section";
 @import "./layout/features";
+@import "./layout/activities";
 @import "./layout/team";
 @import "./layout/clients";
 @import "./layout/modal";
@@ -23,7 +25,6 @@
 @import "./components/buttons";
 @import "./components/socials";
 @import "./components/person";
-@import "./components/activity";
 @import "./components/contacts";
 @import "./components/address";
 @import "./components/subscribe-form";
