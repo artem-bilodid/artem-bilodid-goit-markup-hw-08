@@ -1,13 +1,23 @@
 .subscribe-form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .subscribe-form__input {
-  margin-right: 12px;
   font-size: 16px;
   line-height: 1.25;
   padding: 16px 15px;
-  width: 358px;
+
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -15,6 +25,22 @@
   border-radius: 4px;
   background-color: transparent;
   color: var(--background-dark-primary-text-color);
+
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 450px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 
 .subscribe-form__input::placeholder {

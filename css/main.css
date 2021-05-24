@@ -30,11 +30,6 @@
   transition: var(--animate-color);
 }
 
-.join-us-container, .address-container {
-  width: 270px;
-  margin-right: 30px;
-}
-
 .section__title, .features__title, .person__name {
   color: var(--title-text-color);
 }
@@ -918,7 +913,24 @@ img {
 
 .footer__container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .footer__logo {
@@ -931,6 +943,67 @@ img {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+.address-container {
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .address-container {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .address-container {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-container {
+    text-align: left;
+    flex-basis: 270px;
+    margin-right: 30px;
+  }
+}
+
+.join-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .join-us-container {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .join-us-container {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join-us-container {
+    text-align: left;
+    align-items: flex-start;
+    flex-basis: 270px;
+    margin-right: 30px;
+  }
+}
+
+.subscribe-container {
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-container {
+    text-align: left;
+  }
 }
 
 .logo {
@@ -1044,7 +1117,6 @@ img {
 
 .socials__list {
   display: flex;
-  justify-content: center;
 }
 
 .socials__item:not(:last-child) {
@@ -1093,9 +1165,15 @@ img {
   margin-bottom: 16px;
 }
 
-.contacts__link {
-  display: flex;
-  align-items: center;
+.person__socials__list {
+  justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contacts__icon {
@@ -1106,6 +1184,13 @@ img {
 .address {
   color: var(--footer-secondary-text-color);
   font-style: normal;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    text-align: left;
+  }
 }
 
 .address__text {
@@ -1119,14 +1204,22 @@ img {
 
 .subscribe-form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .subscribe-form__input {
-  margin-right: 12px;
   font-size: 16px;
   line-height: 1.25;
   padding: 16px 15px;
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -1134,6 +1227,25 @@ img {
   border-radius: 4px;
   background-color: transparent;
   color: var(--background-dark-primary-text-color);
+}
+
+@media screen and (max-width: 1200px) {
+  .subscribe-form__input {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .subscribe-form__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-form__input {
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 
 .subscribe-form__input::placeholder {
