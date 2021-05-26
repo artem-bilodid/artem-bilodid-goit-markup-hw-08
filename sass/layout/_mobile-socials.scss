@@ -1,0 +1,18 @@
+.mobile-socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile-socials__item {
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.222;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+
+  &:not(:last-child) {
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}

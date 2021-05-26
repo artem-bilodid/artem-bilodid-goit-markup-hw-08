@@ -13,7 +13,7 @@
     <title>WebStudio | Студия</title>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a class="logo navigation__logo" href="./"
@@ -53,8 +53,100 @@
             >
           </li>
         </ul>
+        <button type="button" class="header__menu-button" data-menu-modal-open>
+          <svg width="40" height="40" class="header__menu-icon">
+            <use href="./images/icons/icons-bundle.svg#icon-burger-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
+    <div class="mobile-menu mobile-menu--is-hidden" data-menu-modal>
+      <div class="container mobile-menu__container">
+        <ul class="mobile-navigation">
+          <li class="mobile-navigation__item">
+            <a
+              class="mobile-navigation__link mobile-navigation__link--current"
+              href="./index.html"
+              >Студия</a
+            >
+          </li>
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link" href="./portfolio.html"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link" href="">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-contacts">
+          <li class="mobile-contacts__item">
+            <a class="mobile-contacts__link" href="tel:+380961111111">
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-contacts__item">
+            <a class="mobile-contacts__link" href="mailto:info@devstudio.com">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferer"
+              class="mobile-socials__link"
+            >
+              Instagram</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferer"
+              class="mobile-socials__link"
+            >
+              Twitter</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferer"
+              class="mobile-socials__link"
+            >
+              Facebook</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferer"
+              class="mobile-socials__link"
+            >
+              LinkedIn</a
+            >
+          </li>
+        </ul>
+
+        <button
+          type="button"
+          class="mobile-menu__button-close"
+          data-menu-modal-close
+        >
+          <svg width="40" height="40" class="mobile-menu__close-icon">
+            <use href="./images/icons/icons-bundle.svg#icon-close-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <main>
       <!--Hero -->
       <section class="hero">
@@ -730,4 +822,5 @@
     </div>
   </body>
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </html>

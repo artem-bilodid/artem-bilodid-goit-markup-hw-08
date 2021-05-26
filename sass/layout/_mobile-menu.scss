@@ -1,0 +1,49 @@
+@import "./mobile-navigation";
+@import "./mobile-contacts";
+@import "./mobile-socials";
+
+.mobile-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu--is-hidden {
+  display: none;
+}
+
+.mobile-menu__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  position: relative;
+  padding: 48px 40px;
+}
+
+.mobile-menu__button-close {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  --color1: currentColor;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}

@@ -9,14 +9,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
+  height: 60px;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
 }
 
 .header__contacts {
-  display: flex;
-  align-items: center;
+  display: none;
+
+  @media screen and (max-width: 1200px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .header__contacts .contacts__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 50px;
+  }
+}
+
+.header__menu-button {
+  display: flex;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  --color1: currentColor;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
